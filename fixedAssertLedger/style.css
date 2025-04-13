@@ -1,3 +1,7 @@
+body {
+    margin-top: 50px;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -8,4 +12,55 @@ th, td {
     padding: 8px;
     text-align: left;
     background-color: #fff;
+}
+
+.center {
+    text-align: center;  /* 横方向の中央揃え */
+    vertical-align: middle; /* 縦方向の中央揃え */
+}
+
+.double-underline {
+    display: block; /* 中央揃え */
+    width: fit-content;
+    margin: 0 auto 16px auto; /* 上にスペース追加 */
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    padding-bottom: 3px;
+    margin-bottom: 16px;
+}
+
+.double-underline::before,
+.double-underline::after {
+    content: "";
+    position: absolute;
+    left: -0.5ch;
+    width: calc(100% + 1ch); /* 全体で1文字分長くする */
+    height: 2px;
+    background-color: black;
+}
+
+.double-underline::before {
+    bottom: 5px; /* 上の線 */
+}
+
+.double-underline::after {
+    bottom: 0; /* 下の線 */
+}
+
+.company-name {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.date-info {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    position: absolute; /* ページの右上に固定 */
+    top: 70px; /* 位置調整（タイトルと同じくらいの高さ） */
+    right: 25px; /* 右端に余白を追加 */
+    line-height: 1.5; /* 改行を少し余裕をもたせて表示 */
 }
