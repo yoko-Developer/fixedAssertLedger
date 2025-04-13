@@ -64,3 +64,17 @@ th, td {
     right: 25px; /* 右端に余白を追加 */
     line-height: 1.5; /* 改行を少し余裕をもたせて表示 */
 }
+
+/* 背景色の設定 */
+
+th:nth-child(8),
+th:nth-child(11),
+th:nth-child(15) {
+    background-color:#c5c1c1;
+}
+
+td:nth-child(8),
+td:nth-child(11),
+td:nth-child(15) {
+    background-color:#c5c1c1;
+}
