@@ -1,0 +1,96 @@
+th {
+    text-align: center;
+    vertical-align: middle;
+    height: 60px;
+    background-color: rgb(153, 242, 253);
+    border: 1px solid #000; /* 罫線を復活 */
+    color: darkblue;
+}
+
+td {
+    border: 1px solid #000; /* 全部のセルに縦横の罫線 */
+    padding: 8px;
+    background-color: #fff;
+}
+
+/* select をセルっぽく見せる（枠なし、100%幅、矢印あり） */
+td select {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 4px;
+    background-color: transparent;
+    appearance: auto; /* ← ブラウザ標準の矢印を使う */
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+}
+
+body {
+    margin-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.center {
+    text-align: center;  /* 横方向の中央揃え */
+    vertical-align: middle; /* 縦方向の中央揃え */
+}
+
+.double-underline {
+    display: block; /* 中央揃え */
+    width: fit-content;
+    margin: 0 auto 16px auto; /* 上にスペース追加 */
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    padding-bottom: 3px;
+    margin-bottom: 16px;
+}
+
+.double-underline::before,
+.double-underline::after {
+    content: "";
+    position: absolute;
+    left: -0.5ch;
+    width: calc(100% + 1ch); /* 全体で1文字分長くする */
+    height: 2px;
+    background-color: black;
+}
+
+.double-underline::before {
+    bottom: 5px; /* 上の線 */
+}
+
+.double-underline::after {
+    bottom: 0; /* 下の線 */
+}
+
+.company-name {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.date-info {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    position: absolute; /* ページの右上に固定 */
+    top: 70px; /* 位置調整（タイトルと同じくらいの高さ） */
+    right: 25px; /* 右端に余白を追加 */
+    line-height: 1.5; /* 改行を少し余裕をもたせて表示 */
+}
+
+select {
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none; /* ブラウザのスタイルを消す（オプション） */
+    background-color: #fff;
+}
